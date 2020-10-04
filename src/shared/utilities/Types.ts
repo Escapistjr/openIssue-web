@@ -1,4 +1,12 @@
+export type Distribution = 'equalSpacing' | 'leading' | 'trailing' | 'center' | 'fill' | 'fillEvenly';
+export type Spacing = 'none' | 'extraSmall' | 'small' | 'medium' | 'normal' | 'large' | 'extraLarge';
+export type Alignment = 'leading' | 'trailing' | 'center' | 'fill' | 'baseline';
+export type Variation = 'positive' | 'negative' | 'strong' | 'subdued';
+export type Size = 'small' | 'medium' | 'large' | 'extraLarge';
+export type PreferredAlignment = 'left' | 'center' | 'right';
 export type Falsy = boolean | undefined | null | 0;
+export type Responsive<T> = T | T[];
+
 export type Color =
 	| 'white'
 	| 'black'

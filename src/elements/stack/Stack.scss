@@ -1,0 +1,203 @@
+@import '../../shared/styles/utilities';
+
+/// Adjusts the spacing for the stack and contained items.
+/// @param {String} $spacing - The spacing variant to use.
+
+@mixin stack-spacing($spacing: base) {
+	margin-top: -1 * spacing($spacing);
+	margin-left: -1 * spacing($spacing);
+
+	> .Stack--Item {
+		margin-top: spacing($spacing);
+		margin-left: spacing($spacing);
+		max-width: 100%;
+	}
+
+	&.Stack--Vertical.Stack--AffectFirst > .Stack--Item:first-child {
+		margin-top: spacing($spacing) * 2;
+	}
+}
+
+.Stack {
+	@include stack-spacing;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+}
+
+.Stack--noWrap {
+	flex-wrap: nowrap;
+}
+
+.Stack--spacingNone {
+	@include stack-spacing(none);
+}
+
+.Stack--spacingExtraTight {
+	@include stack-spacing(extraTight);
+}
+
+.Stack--spacingTight {
+	@include stack-spacing(tight);
+}
+
+.Stack--spacingLoose {
+	@include stack-spacing(loose);
+}
+
+.Stack--spacingExtraLoose {
+	@include stack-spacing(extraLoose);
+}
+
+.Stack--distributionLeading {
+	justify-content: flex-start;
+}
+
+.Stack--distributionTrailing {
+	justify-content: flex-end;
+}
+
+.Stack--distributionCenter {
+	justify-content: center;
+}
+
+.Stack--distributionEqualSpacing {
+	justify-content: space-between;
+}
+
+.Stack--distributionFill > .Stack--Item {
+	flex: 1 1 auto;
+}
+
+.Stack--distributionFillEvenly > .Stack--Item {
+	flex: 1 1 auto;
+
+	@supports (min-width: fit-content) {
+		flex: 1 0 0%;
+		min-width: fit-content;
+	}
+}
+
+.Stack--alignmentLeading {
+	align-items: flex-start;
+}
+
+.Stack--alignmentTrailing {
+	align-items: flex-end;
+}
+
+.Stack--alignmentCenter {
+	align-items: center;
+}
+
+.Stack--alignmentFill {
+	align-items: stretch;
+}
+
+.Stack--alignmentBaseline {
+	align-items: baseline;
+}
+
+.Stack--Vertical {
+	flex-direction: column;
+	margin-left: spacing(none);
+
+	> .Stack--Item {
+		margin-left: spacing(none);
+	}
+}
+
+.Stack--Item {
+	flex: 0 0 auto;
+	min-width: 0;
+}
+
+.Stack--Item .Stack--Item-Fill:first-child {
+	flex: 1 1 auto;
+}
+
+.Stack--Item-Fill {
+	flex: 1 1 auto;
+}
+
+.Stack--PaddingNone {
+	padding: spacing(none);
+}
+
+.Stack--PaddingExtraSmall {
+	padding: spacing(extraTight);
+}
+
+.Stack--PaddingSmall {
+	padding: spacing(tight);
+}
+
+.Stack--PaddingMedium {
+	padding: spacing(base-tight);
+}
+
+.Stack--PaddingNormal {
+	padding: spacing();
+}
+
+.Stack--PaddingLarge {
+	padding: spacing(loose);
+}
+
+.Stack--PaddingExtraLarge {
+	padding: spacing(extraLoose);
+}
+
+.Stack--onClick {
+	cursor: pointer;
+}
+
+.Stack--Item-KeepWidth {
+	flex: 0 1 auto !important;
+}
+
+$stack-spacing-map: (
+	none: 'none',
+	extraTight: 'extraTight',
+	tight: 'tight',
+	loose: 'loose',
+	extraLoose: 'extraLoose',
+);
+
+$stack-alignment-map: (
+	leading: 'flex-start',
+	trailing: 'flex-end',
+	center: 'center',
+	fill: 'stretch',
+	baseline: 'baseline',
+);
+
+$stack-distribution-map: (
+	leading: 'flex-start',
+	trailing: 'flex-end',
+	center: 'center',
+	equalSpacing: 'space-between',
+	fill: '1 1 auto;',
+	fillEvenly: '1 1 auto',
+);
+
+$stack-padding-map: (
+	none: 'none',
+	extraTight: 'extraTight',
+	tight: 'tight',
+	base-tight: 'base-tight',
+	base: 'base',
+	loose: 'loose',
+	extraLoose: 'extraLoose',
+);
+
+$stack-wrap-map: (
+	noWrap: 'nowrap',
+	wrap: 'wrap',
+);
+
+@include generateResponsiveClasses($stack-spacing-map, 'Stack--spacing', 'spacing');
+@include generateResponsiveClasses($stack-alignment-map, 'Stack--alignment', 'alignment');
+@include generateResponsiveClasses($stack-distribution-map, 'Stack--distribution', 'distribution');
+@include generateResponsiveClasses($stack-padding-map, 'Stack--Padding', 'padding');
+@include generateResponsiveClasses($stack-wrap-map, 'Stack--', 'wrap');

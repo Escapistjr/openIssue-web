@@ -16,7 +16,7 @@ export const Icon = ({ source, size = 'base', color }: IconProps) => {
 	return (
 		<div
 			className={classNames('Icon', size && size !== 'base' && variationName('Icon--', size), color && variationName('Icon--Color', color))}>
-			<ReactSVG src={source} alt='Icon' />
+			<ReactSVG src={source} />
 		</div>
 	);
 };

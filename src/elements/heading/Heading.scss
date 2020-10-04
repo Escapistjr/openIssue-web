@@ -1,0 +1,12 @@
+@import '../../shared/styles/utilities';
+
+.Heading {
+	font-size: rem(17px);
+	font-weight: 600;
+	line-height: rem(24px);
+	margin: 0;
+}
+
+.Heading--Negative {
+	color: color($red);
+}
