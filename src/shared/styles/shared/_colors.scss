@@ -1,0 +1,120 @@
+@function color($color, $value: base) {
+	@return map-get($color, $value);
+}
+
+@mixin color-icon($value, $hue: base) {
+	svg {
+		fill: color($value, $hue);
+	}
+}
+
+$red: (
+	text: #5e0a17,
+	dark: #ba142e,
+	base: #eb4962,
+	light: #f0778a,
+	lighter: #f5a5b1,
+	lightest: #fad3d9,
+);
+
+$orange: (
+	text: #592106,
+	dark: #b8450d,
+	base: #f1763a,
+	light: #f4976a,
+	lighter: #f8b899,
+	lightest: #fbd9c9,
+);
+
+$pink: (
+	text: #6a1552,
+	dark: #bf2694,
+	base: #e16ac0,
+	light: #ea94d2,
+	lighter: #f2bfe4,
+	lightest: #fbe9f6,
+);
+
+$purple: (
+	text: #371145,
+	dark: #782696,
+	base: #af4fd3,
+	light: #c278dd,
+	lighter: #d4a1e7,
+	lightest: #e7c9f2,
+);
+
+$indigo: (
+	text: #220f53,
+	dark: #451eaa,
+	base: #774ee0,
+	light: #9879e8,
+	lighter: #baa5ef,
+	lightest: #dbd0f7,
+);
+
+$blue: (
+	text: #07153c,
+	dark: #123597,
+	base: #295be6,
+	light: #577eeb,
+	lighter: #84a1f1,
+	lightest: #b2c4f6,
+);
+
+$cyan: (
+	text: #032029,
+	dark: #0b6987,
+	base: #12b2e6,
+	light: #3bc3f0,
+	lighter: #6bd2f3,
+	lightest: #9ae0f7,
+);
+
+$green: (
+	text: #05170c,
+	dark: #196937,
+	base: #2cbc63,
+	light: #47d47d,
+	lighter: #70de9a,
+	lightest: #9ae7b7,
+);
+
+$yellow: (
+	text: #272002,
+	dark: #897006,
+	base: #eac00b,
+	light: #f5d133,
+	lighter: #f8dc63,
+	lightest: #fae794,
+);
+
+$grey: (
+	dark: #555555,
+	base: #999999,
+	light: #cccccc,
+	lighter: #f3f3f3,
+);
+
+$ink: (
+	base: #212b36,
+	light: #454f5b,
+	lighter: #637381,
+	lightest: #919eab,
+);
+
+$translucent: (
+	base: rgba(0, 0, 0, 0.161),
+	light: rgba(0, 0, 0, 0.031),
+);
+
+$black: (
+	'base': #000000,
+);
+
+$white: (
+	'base': #ffffff,
+);
+
+$body-background-color: #f4f6f8;
+$body-text-color: color($ink);

@@ -1,0 +1,30 @@
+/* Shadows are intentionally very subtle gradiations. */
+$shadows-data: (
+	faint: (
+		0 2px 6px 2px rgba(0, 0, 0, 0.1),
+	),
+	base: (
+		0 2px 6px 2px rgba(0, 0, 0, 0.2),
+	),
+	deep: (
+		0 2px 6px 3px rgba(0, 0, 0, 0.4),
+	),
+	layer: (
+		0 2px 6px 4px rgba(0, 0, 0, 0.6),
+	),
+	transparent: 0 0 0 0 transparent,
+);
+
+/// Returns the shadow for the specified depth
+/// @param {String} $depth [base] - The shadow’s depth.
+/// @return {List} The shadow value.
+
+@function shadow($depth: base) {
+	$fetched-value: map-get($shadows-data, $depth);
+
+	@if type-of($fetched-value) == list {
+		@return $fetched-value;
+	} @else {
+		@error 'Shadow variant `#{$depth}` not found. Available variants: #{available-names($shadows-data)}';
+	}
+}

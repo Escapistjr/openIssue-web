@@ -38,16 +38,6 @@ $body-font: 'proxima-nova', 'Helvetica Neue', Helvetica, arial, sans-serif;
 	font-style: italic;
 }
 
-html {
-	font-size: 100%;
-}
-
-body {
-	line-height: $line-height;
-	font-family: $body-font;
-	color: $body-color;
-}
-
 /* 
  * Modular scale
  * http://www.modularscale.com/?1.25&em&1.33&web&text
@@ -62,7 +52,7 @@ $type-scale-desktop: (
 	h3: 2.211rem,
 	h4: 1.663rem,
 	p: 1.25rem,
-	small: 1rem // deviates from modular scale,,,,,,,,
+	small: 1rem // deviates from modular scale,,,,,,,,,,,,,,,,
 );
 
 /* 
@@ -94,7 +84,7 @@ $type-scale-mobile: (
 	h3: 1.719rem,
 	h4: 1.375rem,
 	p: 1.1rem,
-	small: 0.94rem // deviates from modular scale,,,,,,,,
+	small: 0.94rem // deviates from modular scale,,,,,,,,,,,,,,,,
 );
 
 $breakpoint-tablet: 75em;
@@ -159,7 +149,7 @@ blockquote {
 	@include margin-bottom(1);
 	@include size(p);
 	padding: 1rem 0 1rem 1.6rem;
-	border-left: 0.5rem solid color($theme-color);
+	border-left: 0.5rem solid color($grey);
 	margin-top: $whitespace;
 }
 
@@ -167,7 +157,7 @@ cite {
 	&:before {
 		content: '\2014 ';
 	}
-	color: color($grey, 400);
+	color: color($grey);
 	display: block;
 }
 

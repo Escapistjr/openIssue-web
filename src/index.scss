@@ -1,3 +1,5 @@
+@import './shared/styles/utilities', './shared/styles/foundation';
+
 /*! reeeset.css 0.0.5 - https://github.com/corysimmons/reeeset */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
@@ -8,9 +10,15 @@
  */
 
 html {
+	position: relative;
 	font-family: sans-serif; /* 1 */
+	text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%; /* 2 */
 	-webkit-text-size-adjust: 100%; /* 2 */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	font-size: 62.5%;
 }
 
 /**
@@ -19,6 +27,12 @@ html {
 
 body {
 	margin: 0;
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: $line-height;
+	font-family: $body-font;
+	color: $body-text-color;
+	// background-color: $body-background-color;
 }
 
 /* HTML5 display definitions

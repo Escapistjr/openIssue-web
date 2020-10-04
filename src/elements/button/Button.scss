@@ -1,0 +1,363 @@
+@import '../../shared/styles/utilities.scss';
+
+.Button {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	margin: 0;
+	border-radius: border-radius();
+	border: none;
+	font-size: rem(16px);
+	font-weight: 600;
+	outline: none;
+	transition: all 0.2s ease-in;
+}
+
+.Button--Default {
+	color: color($ink);
+	background-color: transparent;
+	@include color-icon($ink, lighter);
+
+	&:hover {
+		background-color: color($translucent, light);
+	}
+
+	&:active {
+		background-color: color($translucent);
+	}
+}
+
+.Button--Size-Slim {
+	padding: spacing(extraTight) spacing(tight);
+}
+.Button--Size-Base {
+	padding: spacing(tight) spacing();
+}
+.Button--Size-Large {
+	padding: spacing() spacing(extraLoose);
+	font-weight: bold;
+	font-size: rem(20px);
+}
+
+.Button--Content {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 1px;
+	min-height: 1px;
+	flex-wrap: nowrap;
+}
+
+.Button--Icon-AlignRight {
+	margin-right: -(spacing(extraTight));
+	margin-left: spacing(extraTight);
+}
+
+.Button--Icon-AlignLeft {
+	margin-left: -(spacing(extraTight));
+	margin-right: spacing(extraTight);
+}
+
+.Button--Primary {
+	color: color($white);
+	background: color($ink);
+	@include color-icon($white);
+	font-weight: 600;
+
+	&:hover {
+		box-shadow: shadow();
+	}
+
+	&:active {
+		box-shadow: shadow(deep);
+	}
+}
+
+.Button--Secondary {
+	color: color($ink);
+	background: color($white);
+	@include color-icon($ink, lighter);
+	box-shadow: shadow(faint);
+
+	&:hover {
+		box-shadow: shadow();
+	}
+
+	&:active {
+		box-shadow: shadow(deep);
+	}
+}
+
+.Button--Plain {
+	padding: 0;
+	background-color: transparent;
+	font-weight: 400;
+
+	@include hover {
+		text-decoration: underline;
+	}
+}
+
+.Button--Outline {
+	border: 1px solid color($grey);
+	background-color: transparent;
+
+	&:hover {
+		background-color: color($translucent, light);
+	}
+
+	&:active {
+		background-color: color($translucent);
+	}
+}
+
+.Button--Destructive {
+	background-color: color($red, dark);
+	color: color($white);
+	font-weight: 600;
+
+	&:hover {
+		box-shadow: shadow();
+	}
+
+	&:active {
+		box-shadow: shadow(deep);
+	}
+}
+
+.Button--IconOnly {
+	padding-left: spacing(tight);
+	padding-right: spacing(tight);
+}
+
+.Button--ColorTheme-Red {
+	color: color($red, text);
+	@include color-icon($red, dark);
+
+	.Button--Secondary {
+		background-color: color($red, lightest);
+	}
+
+	.Button--Outline {
+		border-color: color($red, text);
+
+		&:hover {
+			background-color: color($red, lightest);
+		}
+
+		&:active {
+			background-color: color($red, lighter);
+		}
+	}
+
+	.Button--Plain {
+		background-color: transparent;
+	}
+}
+
+.Button--ColorTheme-Blue {
+	color: color($blue, text);
+	@include color-icon($blue, dark);
+
+	&.Button--Secondary {
+		background-color: color($blue, lightest);
+	}
+
+	&.Button--Outline {
+		border-color: color($blue, text);
+
+		&:hover {
+			background-color: color($blue, lightest);
+		}
+
+		&:active {
+			background-color: color($blue, lighter);
+		}
+	}
+
+	&.Button--Plain {
+		background-color: transparent;
+	}
+}
+
+.Button--ColorTheme-Pink {
+	color: color($pink, text);
+	@include color-icon($pink, dark);
+
+	&.Button--Secondary {
+		background-color: color($pink, lightest);
+	}
+
+	&.Button--Outline {
+		border-color: color($pink, text);
+
+		&:hover {
+			background-color: color($pink, lightest);
+		}
+
+		&:active {
+			background-color: color($pink, lighter);
+		}
+	}
+
+	&.Button--Plain {
+		background-color: transparent;
+	}
+}
+
+.Button--ColorTheme-Purple {
+	color: color($purple, text);
+	@include color-icon($purple, dark);
+
+	&.Button--Secondary {
+		background-color: color($purple, lightest);
+	}
+
+	&.Button--Outline {
+		border-color: color($purple, text);
+
+		&:hover {
+			background-color: color($purple, lightest);
+		}
+
+		&:active {
+			background-color: color($purple, lighter);
+		}
+	}
+
+	&.Button--Plain {
+		background-color: transparent;
+	}
+}
+
+.Button--ColorTheme-Indigo {
+	color: color($indigo, text);
+	@include color-icon($indigo, dark);
+
+	&.Button--Secondary {
+		background-color: color($indigo, lightest);
+	}
+
+	&.Button--Outline {
+		border-color: color($indigo, text);
+
+		&:hover {
+			background-color: color($indigo, lightest);
+		}
+
+		&:active {
+			background-color: color($indigo, lighter);
+		}
+	}
+
+	&.Button--Plain {
+		background-color: transparent;
+	}
+}
+
+.Button--ColorTheme-Cyan {
+	color: color($cyan, text);
+	@include color-icon($cyan, dark);
+
+	&.Button--Secondary {
+		background-color: color($cyan, lightest);
+	}
+
+	&.Button--Outline {
+		border-color: color($cyan, text);
+
+		&:hover {
+			background-color: color($cyan, lightest);
+		}
+
+		&:active {
+			background-color: color($cyan, lighter);
+		}
+	}
+
+	&.Button--Plain {
+		background-color: transparent;
+	}
+}
+
+.Button--ColorTheme-Orange {
+	color: color($orange, text);
+	@include color-icon($orange, dark);
+
+	&.Button--Secondary {
+		background-color: color($orange, lightest);
+	}
+
+	&.Button--Outline {
+		border-color: color($orange, text);
+
+		&:hover {
+			background-color: color($orange, lightest);
+		}
+
+		&:active {
+			background-color: color($orange, lighter);
+		}
+	}
+
+	&.Button--Plain {
+		background-color: transparent;
+	}
+}
+
+.Button--ColorTheme-Green {
+	color: color($green, text);
+	@include color-icon($green, dark);
+
+	&.Button--Secondary {
+		background-color: color($green, lightest);
+	}
+
+	&.Button--Outline {
+		border-color: color($green, text);
+
+		&:hover {
+			background-color: color($green, lightest);
+		}
+
+		&:active {
+			background-color: color($green, lighter);
+		}
+	}
+
+	&.Button--Plain {
+		background-color: transparent;
+	}
+}
+
+.Button--ColorTheme-Yellow {
+	color: color($yellow, text);
+	@include color-icon($yellow, dark);
+
+	&.Button--Secondary {
+		background-color: color($yellow, lightest);
+	}
+
+	&.Button--Outline {
+		border-color: color($yellow, text);
+
+		&:hover {
+			background-color: color($yellow, lightest);
+		}
+
+		&:active {
+			background-color: color($yellow, lighter);
+		}
+	}
+
+	&.Button--Plain {
+		background-color: transparent;
+	}
+}

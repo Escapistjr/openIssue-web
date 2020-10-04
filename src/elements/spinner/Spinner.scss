@@ -1,0 +1,40 @@
+@import '../../shared/styles/utilities';
+
+$small-size: rem(20px);
+$large-size: rem(44px);
+
+@keyframes loading {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@mixin spinnerSize($size) {
+	height: $size;
+	width: $size;
+}
+
+.Spinner svg {
+	animation: loading 500ms linear infinite;
+	color: transparent;
+}
+
+.Spinner--sizeSmall {
+	@include spinnerSize($small-size);
+}
+
+.Spinner--sizeLarge {
+	@include spinnerSize($large-size);
+}
+
+.Spinner--colorWhite svg > path {
+	fill: color($white);
+}
+
+.Spinner--colorGreen svg > path {
+	fill: color($green);
+}
+
+.Spinner--colorInkLightest svg > path {
+	fill: color($ink, lightest);
+}

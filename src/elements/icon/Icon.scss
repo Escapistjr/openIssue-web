@@ -1,0 +1,240 @@
+@import '../../shared/styles/utilities';
+
+.Icon {
+	position: relative;
+	display: block;
+	height: rem(20px);
+	width: rem(20px);
+	max-height: 100%;
+	max-width: 100%;
+	margin: auto;
+	user-select: none;
+}
+
+.Icon--ColorWhite {
+	@include color-icon($white);
+}
+
+.Icon--ColorBlack {
+	@include color-icon($black);
+}
+
+.Icon--ColorRedDark {
+	@include color-icon($red, dark);
+}
+
+.Icon--ColorRed {
+	@include color-icon($red);
+}
+
+.Icon--ColorRedLight {
+	@include color-icon($red, light);
+}
+
+.Icon--ColorRedLighter {
+	@include color-icon($red, lighter);
+}
+
+.Icon--ColorRedLightest {
+	@include color-icon($red, lightest);
+}
+
+.Icon--ColorOrangeDark {
+	@include color-icon($orange, dark);
+}
+
+.Icon--ColorOrange {
+	@include color-icon($orange);
+}
+
+.Icon--ColorOrangeLight {
+	@include color-icon($orange, light);
+}
+
+.Icon--ColorOrangeLighter {
+	@include color-icon($orange, lighter);
+}
+
+.Icon--ColorOrangeLightest {
+	@include color-icon($orange, lightest);
+}
+
+.Icon--ColorPinkDark {
+	@include color-icon($pink, dark);
+}
+
+.Icon--ColorPink {
+	@include color-icon($pink);
+}
+
+.Icon--ColorPinkLight {
+	@include color-icon($pink, light);
+}
+
+.Icon--ColorPinkLighter {
+	@include color-icon($pink, lighter);
+}
+
+.Icon--ColorPinkLightest {
+	@include color-icon($pink, lightest);
+}
+
+.Icon--ColorPurpleDark {
+	@include color-icon($purple, dark);
+}
+
+.Icon--ColorPurple {
+	@include color-icon($purple);
+}
+
+.Icon--ColorPurpleLight {
+	@include color-icon($purple, light);
+}
+
+.Icon--ColorPurpleLighter {
+	@include color-icon($purple, lighter);
+}
+
+.Icon--ColorPurpleLightest {
+	@include color-icon($purple, lightest);
+}
+
+.Icon--ColorIndigoDark {
+	@include color-icon($indigo, dark);
+}
+
+.Icon--ColorIndigo {
+	@include color-icon($indigo);
+}
+
+.Icon--ColorIndigoLight {
+	@include color-icon($indigo, light);
+}
+
+.Icon--ColorIndigoLighter {
+	@include color-icon($indigo, lighter);
+}
+
+.Icon--ColorIndigoLightest {
+	@include color-icon($indigo, lightest);
+}
+
+.Icon--ColorBlueDark {
+	@include color-icon($blue, dark);
+}
+
+.Icon--ColorBlue {
+	@include color-icon($blue);
+}
+
+.Icon--ColorBlueLight {
+	@include color-icon($blue, light);
+}
+
+.Icon--ColorBlueLighter {
+	@include color-icon($blue, lighter);
+}
+
+.Icon--ColorBlueLightest {
+	@include color-icon($blue, lightest);
+}
+
+.Icon--ColorCyanDark {
+	@include color-icon($cyan, dark);
+}
+
+.Icon--ColorCyan {
+	@include color-icon($cyan);
+}
+
+.Icon--ColorCyanLight {
+	@include color-icon($cyan, light);
+}
+
+.Icon--ColorCyanLighter {
+	@include color-icon($cyan, lighter);
+}
+
+.Icon--ColorCyanLightest {
+	@include color-icon($cyan, lightest);
+}
+
+.Icon--ColorGreenDark {
+	@include color-icon($green, dark);
+}
+
+.Icon--ColorGreen {
+	@include color-icon($green);
+}
+
+.Icon--ColorGreenLight {
+	@include color-icon($green, light);
+}
+
+.Icon--ColorGreenLighter {
+	@include color-icon($green, lighter);
+}
+
+.Icon--ColorGreenLightest {
+	@include color-icon($green, lightest);
+}
+
+.Icon--ColorYellowDark {
+	@include color-icon($yellow, dark);
+}
+
+.Icon--ColorYellow {
+	@include color-icon($yellow);
+}
+
+.Icon--ColorYellowLight {
+	@include color-icon($yellow, light);
+}
+
+.Icon--ColorYellowLighter {
+	@include color-icon($yellow, lighter);
+}
+
+.Icon--ColorYellowLightest {
+	@include color-icon($yellow, lightest);
+}
+
+.Icon--ColorInk {
+	@include color-icon($ink);
+}
+
+.Icon--ColorInkLight {
+	@include color-icon($ink, light);
+}
+
+.Icon--ColorInkLighter {
+	@include color-icon($ink, lighter);
+}
+
+.Icon--ColorInkLightest {
+	@include color-icon($ink, lightest);
+}
+
+.Icon--ColorGreyDark {
+	@include color-icon($grey, dark);
+}
+
+.Icon--ColorGrey {
+	@include color-icon($grey);
+}
+
+.Icon--ColorGreyLight {
+	@include color-icon($grey, light);
+}
+
+.Icon--ColorGreyLighter {
+	@include color-icon($grey, lighter);
+}
+
+.Icon--ColorTranslucent {
+	@include color-icon($translucent);
+}
+
+.Icon--ColorTranslucentLight {
+	@include color-icon($translucent, light);
+}

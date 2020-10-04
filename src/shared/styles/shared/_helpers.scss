@@ -1,0 +1,70 @@
+// -----------------------------------------------------------------------------
+// This file contains helper classes, functions, and mixins
+// -----------------------------------------------------------------------------
+@mixin hover {
+	&:hover,
+	&:active,
+	&:focus {
+		@content;
+	}
+}
+
+/// Returns the border radius of the specified size.
+/// @param {String} $size - The border radius’s size.
+/// @return {Number} The border radius value.
+
+$border-radius-data: (
+	base: 4px,
+	large: 6px,
+);
+
+@function border-radius($size: base) {
+	@return map-get($border-radius-data, $size);
+}
+
+/// Returns the value in rem for a given pixel value.
+/// @param {Number} $value - The pixel value to be converted.
+/// @return {Number} The converted value in rem.
+
+$base-font-size: 10px;
+
+@function rem($value) {
+	$unit: unit($value);
+
+	@if $value == 0 {
+		@return 0;
+	} @else if $unit == 'rem' {
+		@return $value;
+	} @else if $unit == 'px' {
+		@return $value / $base-font-size * 1rem;
+	} @else if $unit == 'em' {
+		@return $unit / 1em * 1rem;
+	} @else {
+		@error 'Value must be in px, em, or rem.';
+	}
+}
+
+/// Returns the spacing value for a given variant.
+///
+/// @param {String} $variant - The key for the given variant.
+/// @return {Number} The spacing for the variant.
+
+$spacing-map: (
+	'none': 0,
+	'extraTight': 4px,
+	'tight': 8px,
+	'base-tight': 12px,
+	'base': 16px,
+	'loose': 20px,
+	'extraLoose': 32px,
+);
+
+@function spacing($variant: base) {
+	$fetched-value: map-get($spacing-map, $variant);
+
+	@if type-of($fetched-value) == number {
+		@return rem($fetched-value);
+	} @else {
+		@error 'Spacing variant `#{$variant}` not found. Available variants: #{available-names($spacing-map)}';
+	}
+}
