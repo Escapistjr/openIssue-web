@@ -4,7 +4,7 @@ import React from 'react';
 import './Button.scss';
 import { Color } from '../../shared/utilities/Types';
 
-export type ButtonSize = 'slim' | 'base' | 'large';
+export type ButtonSize = 'mini' | 'slim' | 'base' | 'large';
 export type IconAlign = 'left' | 'right';
 export type ButtonColorTheme = 'red' | 'blue' | 'pink' | 'purple' | 'indigo' | 'cyan' | 'orange' | 'green' | 'yellow';
 

@@ -14,7 +14,6 @@
 	border-radius: border-radius();
 	border: none;
 	font-size: rem(16px);
-	font-weight: 600;
 	outline: none;
 	transition: all 0.2s ease-in;
 }
@@ -33,8 +32,12 @@
 	}
 }
 
+.Button--Size-Mini {
+	padding: spacing(none) spacing(tight);
+	font-size: rem(14px);
+}
 .Button--Size-Slim {
-	padding: spacing(extraTight) spacing(tight);
+	padding: rem(2px) spacing(base-tight);
 }
 .Button--Size-Base {
 	padding: spacing(tight) spacing();

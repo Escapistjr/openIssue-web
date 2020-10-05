@@ -1,0 +1,14 @@
+@import '../../shared/styles/utilities';
+
+.ConsoleInput {
+	padding: spacing(extraTight) spacing();
+}
+
+.ConsoleInput--Input {
+	border: none;
+	font-size: rem(20px);
+	line-height: rem(40px);
+	padding: 0 spacing(tight);
+	width: 100%;
+	outline: none;
+}

@@ -2,9 +2,8 @@ import { classNames } from '../../shared/utilities/StyleHelpers';
 import { capitalize } from '../../shared/utilities/Utils';
 import React, { useState, useEffect } from 'react';
 import { cancel } from '../../assets/icons';
-import { Icon } from '../icon/Icon';
-import './Modal.scss';
 import { Button } from '..';
+import './Modal.scss';
 
 export type ModalSizeTypes = 'small' | 'medium' | 'large';
 
@@ -17,9 +16,10 @@ export interface ModalProps {
 	size?: ModalSizeTypes;
 	/** Function to close modal */
 	onClose?(): void;
+	showCloseIcon?: boolean;
 }
 
-export const Modal = ({ size = 'medium', children, onClose, show }: ModalProps) => {
+export const Modal = ({ size = 'medium', children, onClose, show, showCloseIcon = false }: ModalProps) => {
 	const [shouldRender, setRender] = useState(show);
 
 	useEffect(() => {
@@ -45,11 +45,11 @@ export const Modal = ({ size = 'medium', children, onClose, show }: ModalProps) 
 
 	document.addEventListener('keydown', handleEscClose, false);
 
-	const closeIcon = (
+	const closeIcon = showCloseIcon ? (
 		<div className='Modal--CloseIcon'>
 			<Button icon={cancel} size='slim' plain onClick={() => onClose()} />
 		</div>
-	);
+	) : null;
 
 	return shouldRender ? (
 		<div
