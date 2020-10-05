@@ -2,7 +2,6 @@ import { classNames, variationName } from '../../shared/utilities/StyleHelpers';
 import { Icon, Spinner } from '..';
 import React from 'react';
 import './Button.scss';
-import { Color } from '../../shared/utilities/Types';
 
 export type ButtonSize = 'mini' | 'slim' | 'base' | 'large';
 export type IconAlign = 'left' | 'right';

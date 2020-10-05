@@ -1,10 +1,10 @@
 @import '../../shared/styles/utilities';
 
-.ConsoleInput {
+.SmartConsole {
 	padding: spacing(extraTight) spacing();
 }
 
-.ConsoleInput--Input {
+.SmartConsole--Input {
 	border: none;
 	font-size: rem(20px);
 	line-height: rem(40px);
