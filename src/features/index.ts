@@ -1,3 +1,4 @@
+export { TicketListHeader } from './ticketListHeader/TicketListHeader';
 export { StatusDropdown } from './statusDropdown/StatusDropdown';
 export { TicketListItem } from './ticketListItem/TicketListItem';
 export { SmartConsole } from './smartConsole/SmartConsole';

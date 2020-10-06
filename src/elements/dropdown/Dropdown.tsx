@@ -16,9 +16,11 @@ export interface DropdownProps {
 	 * @default true
 	 */
 	animate?: boolean;
+	offsetTop?: string;
+	offsetLeft?: string;
 }
 
-export const Dropdown = ({ children, show, onClose, padding = 'normal', animate = true }: DropdownProps) => {
+export const Dropdown = ({ children, show, onClose, padding = 'normal', animate = true, offsetTop, offsetLeft }: DropdownProps) => {
 	const [shouldRender, setRender] = useState(show);
 
 	useEffect(() => {
@@ -47,6 +49,7 @@ export const Dropdown = ({ children, show, onClose, padding = 'normal', animate 
 	return shouldRender ? (
 		<ClickAwayListener onClickAway={onClose}>
 			<div
+				style={{ left: offsetLeft, top: offsetTop }}
 				className={classNames('Dropdown', padding && variationName('Dropdown--Padding-', padding), animate && 'Dropdown--Animate')}
 				onAnimationEnd={onAnimationEnd}>
 				{children}

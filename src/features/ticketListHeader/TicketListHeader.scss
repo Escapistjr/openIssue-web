@@ -1,5 +1,23 @@
 @import '../../shared/styles/utilities';
 
 .TicketListHeader {
+	position: relative;
+	padding: spacing(extraTight) rem(2px);
 	border-bottom: rem(1px) solid color($translucent);
+}
+
+.TicketListHeader--Filter-Item {
+	padding: rem(2px) spacing(tight);
+	border-radius: border-radius();
+	cursor: pointer;
+	user-select: none;
+	transition: 0.2s;
+	font-weight: 600;
+
+	&:hover {
+		background-color: color($grey, lighter);
+	}
+	&:active {
+		background-color: color($grey, light);
+	}
 }

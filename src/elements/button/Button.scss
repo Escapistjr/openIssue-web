@@ -13,7 +13,6 @@
 	margin: 0;
 	border-radius: border-radius();
 	border: none;
-	font-size: rem(16px);
 	outline: none;
 	transition: all 0.2s ease-in;
 }
@@ -72,7 +71,6 @@
 	color: color($white);
 	background: color($ink);
 	@include color-icon($white);
-	font-weight: 600;
 
 	&:hover {
 		box-shadow: shadow();

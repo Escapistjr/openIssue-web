@@ -21,7 +21,6 @@ $statusDropdownMobile-width: rem(110px);
 	width: $statusDropdownMobile-width;
 	cursor: pointer;
 	transition: 0.2s;
-	text-shadow: 0 0 2px transparentize(color($black), 0.8);
 	font-size: rem(12px);
 
 	&:hover {
@@ -36,5 +35,5 @@ $statusDropdownMobile-width: rem(110px);
 }
 
 .StatusDropdown--Options-Item:hover {
-	transform: translateY(-2px);
+	transform: translateY(rem(-2px));
 }

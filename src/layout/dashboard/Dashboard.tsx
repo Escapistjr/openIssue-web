@@ -1,14 +1,13 @@
 import { Page, Stack } from '../../elements';
-import { TicketList } from '../../features';
+import { TicketList, TicketListHeader } from '../../features';
 import React from 'react';
 import './Dashboard.scss';
-import { TicketListHeader } from '../../features/ticketListHeader/TicketListHeader';
 
 export const Dashboard = () => {
 	return (
 		<Page>
 			<Stack alignment='baseline' spacing='extraTight'>
-				<div>Dashboard view</div>
+				<div>Tayra.io openTicket page</div>
 			</Stack>
 			<TicketListHeader />
 			<TicketList />

@@ -8,3 +8,4 @@ export { default as bugIcon } from './bugIcon.svg';
 export { default as cancel } from './cancel.svg';
 export { default as search } from './search.svg';
 export { default as design } from './design.svg';
+export { default as filter } from './filter.svg';
