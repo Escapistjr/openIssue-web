@@ -1,0 +1,93 @@
+[
+	{
+		"key": "TYR-1",
+		"title": "Implement raw metrics",
+		"type": "bug",
+		"status": "open",
+		"lastModifiedAt": "2/3/2020"
+	},
+	{
+		"key": "TYR-2",
+		"title": "Implement combo metrics",
+		"type": "improvement",
+		"status": "inProgress",
+		"lastModifiedAt": "2/3/2020"
+	},
+	{
+		"key": "TYR-2",
+		"title": "Implement combo metrics",
+		"type": "bug",
+		"status": "inProgress",
+		"lastModifiedAt": "2/3/2020"
+	},
+	{
+		"key": "TYR-2",
+		"title": "Implement combo metrics combo metrics",
+		"type": "bug",
+		"status": "open",
+		"lastModifiedAt": "2/3/2020"
+	},
+	{
+		"key": "TYR-2",
+		"title": "Implement combo metrics",
+		"type": "bug",
+		"status": "inProgress",
+		"lastModifiedAt": "2/3/2020"
+	},
+	{
+		"key": "TYR-2",
+		"title": "Implement combo metrics combo metrics combo metrics",
+		"type": "question",
+		"status": "open",
+		"lastModifiedAt": "2/3/2020"
+	},
+	{
+		"key": "TYR-2",
+		"title": "Implement combo metrics combo metrics",
+		"type": "bug",
+		"status": "moreInfoNeeded",
+		"lastModifiedAt": "2/3/2020"
+	},
+	{
+		"key": "TYR-2",
+		"title": "Implement combo metrics asdsaf asf asf asf",
+		"type": "design",
+		"status": "closed",
+		"lastModifiedAt": "2/3/2020"
+	},
+	{
+		"key": "TYR-2",
+		"title": "Implement combo metrics",
+		"type": "design",
+		"status": "duplicate",
+		"lastModifiedAt": "2/3/2020"
+	},
+	{
+		"key": "TYR-2",
+		"title": "Implement combo metrics",
+		"type": "bug",
+		"status": "closed",
+		"lastModifiedAt": "2/3/2020"
+	},
+	{
+		"key": "TYR-2",
+		"title": "Implement combo metrics Implement combo Implement combo",
+		"type": "improvement",
+		"status": "resolved",
+		"lastModifiedAt": "2/3/2020"
+	},
+	{
+		"key": "TYR-2",
+		"title": "Implement combo metrics Implement combo",
+		"type": "bug",
+		"status": "resolved",
+		"lastModifiedAt": "2/3/2020"
+	},
+	{
+		"key": "TYR-2",
+		"title": "Implement combo metrics",
+		"type": "question",
+		"status": "resolved",
+		"lastModifiedAt": "2/3/2020"
+	}
+]

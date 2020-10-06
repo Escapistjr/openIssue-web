@@ -17,5 +17,22 @@
 }
 
 .TicketListItem--Text {
-	padding: 0 spacing(tight);
+	margin: 0 spacing(tight);
+}
+
+.TicketListItem--Text-Title {
+	border-bottom: rem(1px) solid color($translucent);
+	color: color($ink);
+	min-width: rem(60px);
+	max-width: fit-content;
+	margin-right: spacing();
+}
+
+.TicketListItem--Text-Date {
+	min-width: rem(50px);
+	display: none;
+
+	@include breakpoint-after(450px) {
+		display: block;
+	}
 }

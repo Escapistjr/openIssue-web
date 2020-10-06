@@ -4,6 +4,9 @@
 	font-size: rem(15px);
 	line-height: rem(22px);
 	padding: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .Text--Style-Positive {

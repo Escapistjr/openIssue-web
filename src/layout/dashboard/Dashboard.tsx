@@ -1,7 +1,8 @@
 import { Page, Stack } from '../../elements';
-import { TicketListItem } from '../../features';
+import { TicketList } from '../../features';
 import React from 'react';
 import './Dashboard.scss';
+import { TicketListHeader } from '../../features/ticketListHeader/TicketListHeader';
 
 export const Dashboard = () => {
 	return (
@@ -9,16 +10,8 @@ export const Dashboard = () => {
 			<Stack alignment='baseline' spacing='extraTight'>
 				<div>Dashboard view</div>
 			</Stack>
-			<TicketListItem title='test Ticket' status='open' modified='2 days ago' type='bug' ticketKey='TYR-243' />
-			<TicketListItem title='test Ticket' status='open' modified='2 days ago' type='bug' ticketKey='TYR-243' />
-			<TicketListItem title='test Ticket' status='open' modified='2 days ago' type='bug' ticketKey='TYR-243' />
-			<TicketListItem title='test Ticket' status='open' modified='2 days ago' type='bug' ticketKey='TYR-243' />
-			<TicketListItem title='test Ticket' status='open' modified='2 days ago' type='bug' ticketKey='TYR-243' />
-			<TicketListItem title='test Ticket' status='open' modified='2 days ago' type='bug' ticketKey='TYR-243' />
-			<TicketListItem title='test Ticket' status='open' modified='2 days ago' type='bug' ticketKey='TYR-243' />
-			<TicketListItem title='test Ticket' status='open' modified='2 days ago' type='bug' ticketKey='TYR-243' />
-			<TicketListItem title='test Ticket' status='open' modified='2 days ago' type='bug' ticketKey='TYR-243' />
-			<TicketListItem title='test Ticket' status='open' modified='2 days ago' type='bug' ticketKey='TYR-243' />
+			<TicketListHeader />
+			<TicketList />
 		</Page>
 	);
 };

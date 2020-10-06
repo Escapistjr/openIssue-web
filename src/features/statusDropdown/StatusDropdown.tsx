@@ -34,7 +34,7 @@ export const StatusDropdown = ({ intialStatus, ticketKey }: StatusDropdownProps)
 			{showStatusDropdownOptions ? (
 				<ClickAwayListener onClickAway={() => setShowStatusDropdownOptions(false)}>
 					<div className='StatusDropdown--Options'>
-						<Stack vertical spacing='extraTight'>
+						<Stack vertical spacing={['tight', 'extraTight']}>
 							{Object.entries(TicketStatus).map(([key, value], index) => {
 								return key === ticketStatus ? null : (
 									<div

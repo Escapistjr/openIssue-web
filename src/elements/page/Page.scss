@@ -1,5 +1,7 @@
 @import '../../shared/styles/utilities';
 
+$maxPageWidth: rem(1439px);
+
 html,
 body {
 	min-height: 100%;
@@ -13,6 +15,9 @@ body {
 .Page {
 	height: 100%;
 	padding: spacing(tight) spacing();
+	transition: 0.1s;
+	max-width: $maxPageWidth;
+	margin: 0 auto;
 
 	@include breakpoint-after(450px) {
 		padding: spacing() spacing(extraLoose);

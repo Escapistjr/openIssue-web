@@ -86,7 +86,7 @@ export const TicketStatus = {
 	resolved: { name: 'Resolved', color: Colors.greenLight },
 	moreInfoNeeded: { name: 'More info needed', color: Colors.orangeBase },
 	duplicate: { name: 'Duplicate', color: Colors.orangeLight },
-	closed: { name: 'Closed', color: Colors.greyLight },
+	closed: { name: 'Closed', color: Colors.redLight },
 };
 
 export const TicketType = {

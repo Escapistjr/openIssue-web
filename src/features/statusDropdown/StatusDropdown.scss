@@ -1,28 +1,37 @@
 @import '../../shared/styles/utilities';
 
-$statusDropdown-width: rem(150px);
+$statusDropdownDesktop-width: rem(140px);
+$statusDropdownMobile-width: rem(110px);
 
 .StatusDropdown {
 	position: relative;
-	display: flex;
-	width: $statusDropdown-width;
-	flex-direction: column;
+	width: $statusDropdownMobile-width;
+
+	@include breakpoint-after(450px) {
+		width: $statusDropdownDesktop-width;
+	}
 }
 
 .StatusDropdown--Status {
-	padding: rem(2px) spacing(base-tight);
+	padding: rem(2px) spacing(extraTight);
 	border-radius: border-radius();
 	box-shadow: shadow(faint);
 	color: color($white);
 	background-color: color($grey);
-	font-weight: bold;
-	width: $statusDropdown-width;
+	width: $statusDropdownMobile-width;
 	cursor: pointer;
 	transition: 0.2s;
 	text-shadow: 0 0 2px transparentize(color($black), 0.8);
+	font-size: rem(12px);
 
 	&:hover {
 		box-shadow: shadow();
+	}
+
+	@include breakpoint-after(450px) {
+		padding: rem(2px) spacing(base-tight);
+		font-size: rem(14px);
+		width: $statusDropdownDesktop-width;
 	}
 }
 
