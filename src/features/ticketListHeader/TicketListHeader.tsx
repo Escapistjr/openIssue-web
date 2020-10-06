@@ -3,7 +3,7 @@ import React from 'react';
 
 export const TicketListHeader = () => {
 	return (
-		<div>
+		<div className='TicketListHeader'>
 			<div>TicketListHeader</div>
 		</div>
 	);

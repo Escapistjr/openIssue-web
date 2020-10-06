@@ -1,5 +1,5 @@
 import { classNames } from '../../shared/utilities/StyleHelpers';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import './Heading.scss';
 
 export type HeadingElements = 'h1' | 'h2' | 'p';
@@ -11,7 +11,7 @@ export interface HeadingProps {
 	 */
 	element?: HeadingElements;
 	/** The content to display inside the heading */
-	children?: React.ReactNode;
+	children?: ReactNode;
 	/** Whether the heading shows negative value */
 	negative?: boolean;
 	color?: string;

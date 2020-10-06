@@ -1,1 +1,5 @@
 @import '../../shared/styles/utilities';
+
+.TicketListHeader {
+	border-bottom: rem(1px) solid color($translucent);
+}

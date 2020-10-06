@@ -1,0 +1,45 @@
+@import '../../shared/styles/utilities';
+
+.Dropdown {
+	transition: all 300ms ease;
+
+	will-change: transform;
+	z-index: $zIndex-dropdown;
+	margin-top: rem(28px);
+	position: absolute;
+	top: 0;
+	background-color: transparentize(color($white), 0.09);
+	border-radius: border-radius();
+	box-shadow: shadow(faint);
+	margin-left: rem(-12px);
+}
+
+.Dropdown--Padding-None {
+	padding: 0;
+	margin-left: 0;
+}
+
+.Dropdown--Padding-Small {
+	padding: rem(6px) rem(4px);
+	margin-left: rem(-4px);
+}
+
+.Dropdown--Padding-Normal {
+	padding: rem(8px) rem(12px);
+	margin-left: rem(-12px);
+}
+
+.Dropdown--Padding-Large {
+	padding: rem(10px) rem(16px);
+	margin-left: rem(-16px);
+}
+
+.Dropdown--Animate {
+	animation: moveitback 400ms ease forwards;
+	will-change: transform;
+}
+
+.Dropdown--Animate {
+	animation: moveit 550ms ease forwards;
+	will-change: transform;
+}

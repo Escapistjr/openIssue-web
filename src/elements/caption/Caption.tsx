@@ -1,9 +1,9 @@
-import React from 'react';
 import { classNames } from '../../shared/utilities/StyleHelpers';
+import React, { ReactNode } from 'react';
 import './Caption.scss';
 
 export interface CaptionProps {
-	children?: React.ReactNode;
+	children?: ReactNode;
 }
 
 /** Caption text size is smaller than the recommended size for general reading. It should be used only in a graph or as a timestamp for a list item.

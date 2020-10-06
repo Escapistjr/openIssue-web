@@ -1,6 +1,6 @@
 import { classNames, variationName } from '../../shared/utilities/StyleHelpers';
 import { Padding } from '../../shared/utilities/Types';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import './Page.scss';
 
 export interface PageProps {
@@ -15,7 +15,7 @@ export interface PageProps {
 	/** Fix for browsers collapsing margins of first child elements. @default true */
 	marginFix?: boolean;
 
-	children?: React.ReactNode;
+	children?: ReactNode;
 }
 
 export const Page = ({ padding, narrowWidth, marginFix, children }: PageProps) => {

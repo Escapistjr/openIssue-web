@@ -1,6 +1,6 @@
 import { classNames } from '../../shared/utilities/StyleHelpers';
 import { capitalize } from '../../shared/utilities/Utils';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, ReactNode } from 'react';
 import { cancel } from '../../assets/icons';
 import { Button } from '..';
 import './Modal.scss';
@@ -9,7 +9,7 @@ export type ModalSizeTypes = 'small' | 'medium' | 'large';
 
 export interface ModalProps {
 	/** Elements to display inside stack */
-	children?: React.ReactNode;
+	children?: ReactNode;
 	/** Determines wether the modal is active or not */
 	show: boolean;
 	/** Determines the size of the modal */
@@ -47,7 +47,7 @@ export const Modal = ({ size = 'medium', children, onClose, show, showCloseIcon 
 
 	const closeIcon = showCloseIcon ? (
 		<div className='Modal--CloseIcon'>
-			<Button icon={cancel} size='slim' plain onClick={() => onClose()} />
+			<Button icon={cancel} size='slim' plain onClick={onClose} />
 		</div>
 	) : null;
 

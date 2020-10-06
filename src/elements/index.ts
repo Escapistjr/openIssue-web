@@ -1,3 +1,4 @@
+export { Dropdown } from './dropdown/Dropdown';
 export { Spinner } from './spinner/Spinner';
 export { Heading } from './heading/Heading';
 export { Caption } from './caption/Caption';

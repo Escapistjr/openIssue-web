@@ -1,6 +1,5 @@
 import { TicketType, TicketTypes } from '../../shared/utilities/Types';
-import ClickAwayListener from 'react-click-away-listener';
-import { Icon, Stack } from '../../elements';
+import { Dropdown, Icon, Stack } from '../../elements';
 import React, { useState } from 'react';
 import './TypeDropdown.scss';
 
@@ -29,23 +28,21 @@ export const TypeDropdown = ({ initialType, ticketKey }: TypeDropdownProps) => {
 				<Icon source={TicketType[ticketType].icon} color={TicketType[ticketType].colorName} />
 			</div>
 			{showTypeDropdownOptions ? (
-				<ClickAwayListener onClickAway={() => setShowTypeDropdownOptions(false)}>
-					<div className='TypeDropdown--Options'>
-						<Stack vertical spacing='extraTight'>
-							{Object.entries(TicketType).map(([key, value], index) => {
-								return key === ticketType ? null : (
-									<div
-										key={index}
-										onClick={() => handleStatusChange(key as TicketTypes)}
-										className='TypeDropdown--Status TypeDropdown--Options-Item'
-										title={value.name}>
-										<Icon source={value.icon} color={value.colorName} />
-									</div>
-								);
-							})}
-						</Stack>
-					</div>
-				</ClickAwayListener>
+				<Dropdown show={showTypeDropdownOptions} onClose={() => setShowTypeDropdownOptions(false)} padding='small'>
+					<Stack vertical spacing='extraTight'>
+						{Object.entries(TicketType).map(([key, value], index) => {
+							return key === ticketType ? null : (
+								<div
+									key={index}
+									onClick={() => handleStatusChange(key as TicketTypes)}
+									className='TypeDropdown--Status TypeDropdown--Options-Item'
+									title={value.name}>
+									<Icon source={value.icon} color={value.colorName} />
+								</div>
+							);
+						})}
+					</Stack>
+				</Dropdown>
 			) : null}
 		</div>
 	);

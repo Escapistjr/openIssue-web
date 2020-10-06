@@ -1,7 +1,7 @@
 import { Responsive, Alignment, Distribution, Spacing } from '../../shared/utilities/Types';
 import { elementChildren, wrapWithComponent } from '../../shared/utilities/Utils';
 import { classNames, variationName } from '../../shared/utilities/StyleHelpers';
-import React, { memo, NamedExoticComponent } from 'react';
+import React, { memo, NamedExoticComponent, ReactNode } from 'react';
 import { StackItem } from './StackItem';
 import './Stack.scss';
 
@@ -10,7 +10,7 @@ export type StackWrap = 'wrap' | 'noWrap';
 
 export interface StackProps {
 	/** Elements to display inside stack */
-	children?: React.ReactNode;
+	children?: ReactNode;
 	/** Wrap stack elements to additional rows as needed on small screens (Defaults to true) */
 	wrap?: Responsive<StackWrap>;
 	/** Stack the elements vertically */

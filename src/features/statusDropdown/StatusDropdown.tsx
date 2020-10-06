@@ -1,8 +1,7 @@
 import { TicketStatus, TicketStatuses } from '../../shared/utilities/Types';
+import { Dropdown, Stack } from '../../elements';
 import React, { useState } from 'react';
 import './StatusDropdown.scss';
-import { Stack } from '../../elements';
-import ClickAwayListener from 'react-click-away-listener';
 
 export interface StatusDropdownProps {
 	intialStatus: TicketStatuses;
@@ -32,23 +31,21 @@ export const StatusDropdown = ({ intialStatus, ticketKey }: StatusDropdownProps)
 				{TicketStatus[ticketStatus].name}
 			</div>
 			{showStatusDropdownOptions ? (
-				<ClickAwayListener onClickAway={() => setShowStatusDropdownOptions(false)}>
-					<div className='StatusDropdown--Options'>
-						<Stack vertical spacing={['tight', 'extraTight']}>
-							{Object.entries(TicketStatus).map(([key, value], index) => {
-								return key === ticketStatus ? null : (
-									<div
-										key={index}
-										onClick={() => handleStatusChange(key as TicketStatuses)}
-										className='StatusDropdown--Status StatusDropdown--Options-Item'
-										style={{ backgroundColor: value.color }}>
-										{value.name}
-									</div>
-								);
-							})}
-						</Stack>
-					</div>
-				</ClickAwayListener>
+				<Dropdown show={showStatusDropdownOptions} onClose={() => setShowStatusDropdownOptions(false)}>
+					<Stack vertical spacing={['tight', 'extraTight']}>
+						{Object.entries(TicketStatus).map(([key, value], index) => {
+							return key === ticketStatus ? null : (
+								<div
+									key={index}
+									onClick={() => handleStatusChange(key as TicketStatuses)}
+									className='StatusDropdown--Status StatusDropdown--Options-Item'
+									style={{ backgroundColor: value.color }}>
+									{value.name}
+								</div>
+							);
+						})}
+					</Stack>
+				</Dropdown>
 			) : null}
 		</div>
 	);

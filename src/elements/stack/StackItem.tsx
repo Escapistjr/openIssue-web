@@ -1,10 +1,10 @@
 import { classNames } from '../../shared/utilities/StyleHelpers';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import './Stack.scss';
 
 export interface StackItemProps {
 	/** Elements to display inside item */
-	children?: React.ReactNode;
+	children?: ReactNode;
 	/** Fill the remaining horizontal space in the stack with the item
 	 * @default false
 	 */
