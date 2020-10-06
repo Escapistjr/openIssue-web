@@ -1,6 +1,6 @@
 @import '../../shared/styles/utilities';
 
-.IssuePreview {
+.TicketListItem {
 	width: 100%;
 	height: 100%;
 	padding: spacing(extraTight) spacing(extraTight);
@@ -16,6 +16,6 @@
 	}
 }
 
-.IssuePreview--Text {
+.TicketListItem--Text {
 	padding: 0 spacing(tight);
 }

@@ -1,6 +1,6 @@
 {
-	"short_name": "OpenIssue",
-	"name": "OpenIssue - Customer issue tracker",
+	"short_name": "OpenTicket",
+	"name": "OpenTicket - Customer service public tickets list",
 	"icons": [
 		{
 			"src": "favicon.ico",

@@ -1,11 +1,11 @@
 import { bugIcon, design, improvement, question } from '../../assets/icons';
 
-export type IssueStatuses = 'open' | 'inProgress' | 'resolved' | 'moreInfoNeeded' | 'duplicate' | 'closed';
+export type TicketStatuses = 'open' | 'inProgress' | 'resolved' | 'moreInfoNeeded' | 'duplicate' | 'closed';
 export type Distribution = 'equalSpacing' | 'leading' | 'trailing' | 'center' | 'fill' | 'fillEvenly';
 export type Spacing = 'none' | 'extraSmall' | 'small' | 'medium' | 'normal' | 'large' | 'extraLarge';
 export type Alignment = 'leading' | 'trailing' | 'center' | 'fill' | 'baseline';
 export type Variation = 'positive' | 'negative' | 'strong' | 'subdued';
-export type IssueTypes = 'bug' | 'improvement' | 'design' | 'question';
+export type TicketTypes = 'bug' | 'improvement' | 'design' | 'question';
 export type Size = 'small' | 'medium' | 'large' | 'extraLarge';
 export type Padding = 'none' | 'small' | 'normal' | 'large';
 export type Falsy = boolean | undefined | null | 0;
@@ -80,7 +80,7 @@ export const Colors = {
 	whiteBase: '#ffffff',
 };
 
-export const IssueStatus = {
+export const TicketStatus = {
 	open: { name: 'Open', color: Colors.inkLightest },
 	inProgress: { name: 'In Progress', color: Colors.blueLighter },
 	resolved: { name: 'Resolved', color: Colors.greenLight },
@@ -89,7 +89,7 @@ export const IssueStatus = {
 	closed: { name: 'Closed', color: Colors.greyLight },
 };
 
-export const IssueType = {
+export const TicketType = {
 	bug: { name: 'Bug', color: Colors.redDark, colorName: 'redDark' as Color, icon: bugIcon },
 	improvement: { name: 'Improvement', color: Colors.blueDark, colorName: 'blueDark' as Color, icon: improvement },
 	design: { name: 'Design', color: Colors.cyanDark, colorName: 'cyanDark' as Color, icon: design },

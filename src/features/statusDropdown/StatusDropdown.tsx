@@ -1,25 +1,25 @@
-import { IssueStatus, IssueStatuses } from '../../shared/utilities/Types';
+import { TicketStatus, TicketStatuses } from '../../shared/utilities/Types';
 import React, { useState } from 'react';
 import './StatusDropdown.scss';
 import { Stack } from '../../elements';
 import ClickAwayListener from 'react-click-away-listener';
 
 export interface StatusDropdownProps {
-	intialStatus: IssueStatuses;
-	issueKey: string;
+	intialStatus: TicketStatuses;
+	ticketKey: string;
 }
 
-export const StatusDropdown = ({ intialStatus, issueKey }: StatusDropdownProps) => {
+export const StatusDropdown = ({ intialStatus, ticketKey }: StatusDropdownProps) => {
 	const [showStatusDropdownOptions, setShowStatusDropdownOptions] = useState(false);
 
 	const handleShowStatusDropdownOptions = () => {
 		setShowStatusDropdownOptions((showStatusDropdownOptions) => !showStatusDropdownOptions);
 	};
 
-	const [issuePreviewStatus, setIssuePreviewStatus] = useState(intialStatus);
+	const [ticketStatus, setTicketStatus] = useState(intialStatus);
 
-	const handleStatusChange = (newStatus: IssueStatuses) => {
-		setIssuePreviewStatus(newStatus);
+	const handleStatusChange = (newStatus: TicketStatuses) => {
+		setTicketStatus(newStatus);
 		setShowStatusDropdownOptions(false);
 	};
 
@@ -28,18 +28,18 @@ export const StatusDropdown = ({ intialStatus, issueKey }: StatusDropdownProps) 
 			<div
 				onClick={() => handleShowStatusDropdownOptions()}
 				className='StatusDropdown--Status'
-				style={{ backgroundColor: IssueStatus[issuePreviewStatus].color }}>
-				{IssueStatus[issuePreviewStatus].name}
+				style={{ backgroundColor: TicketStatus[ticketStatus].color }}>
+				{TicketStatus[ticketStatus].name}
 			</div>
 			{showStatusDropdownOptions ? (
 				<ClickAwayListener onClickAway={() => setShowStatusDropdownOptions(false)}>
 					<div className='StatusDropdown--Options'>
 						<Stack vertical spacing='extraTight'>
-							{Object.entries(IssueStatus).map(([key, value], index) => {
-								return key === issuePreviewStatus ? null : (
+							{Object.entries(TicketStatus).map(([key, value], index) => {
+								return key === ticketStatus ? null : (
 									<div
 										key={index}
-										onClick={() => handleStatusChange(key as IssueStatuses)}
+										onClick={() => handleStatusChange(key as TicketStatuses)}
 										className='StatusDropdown--Status StatusDropdown--Options-Item'
 										style={{ backgroundColor: value.color }}>
 										{value.name}

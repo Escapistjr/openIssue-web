@@ -1,7 +1,7 @@
 import React from 'react';
-import './Issue.scss';
+import './Ticket.scss';
 
-export const Issue = () => {
+export const Ticket = () => {
 	return (
 		<div>
 			<div>Single Issue</div>

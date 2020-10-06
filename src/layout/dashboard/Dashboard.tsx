@@ -1,5 +1,5 @@
 import { Page, Stack } from '../../elements';
-import { IssuePreview } from '../../features';
+import { TicketListItem } from '../../features';
 import React from 'react';
 import './Dashboard.scss';
 
@@ -9,16 +9,16 @@ export const Dashboard = () => {
 			<Stack alignment='baseline' spacing='extraTight'>
 				<div>Dashboard view</div>
 			</Stack>
-			<IssuePreview title='test issue' status='open' modified='2 days ago' type='bug' issueKey='TYR-243' />
-			<IssuePreview title='test issue' status='open' modified='2 days ago' type='bug' issueKey='TYR-243' />
-			<IssuePreview title='test issue' status='open' modified='2 days ago' type='bug' issueKey='TYR-243' />
-			<IssuePreview title='test issue' status='open' modified='2 days ago' type='bug' issueKey='TYR-243' />
-			<IssuePreview title='test issue' status='open' modified='2 days ago' type='bug' issueKey='TYR-243' />
-			<IssuePreview title='test issue' status='open' modified='2 days ago' type='bug' issueKey='TYR-243' />
-			<IssuePreview title='test issue' status='open' modified='2 days ago' type='bug' issueKey='TYR-243' />
-			<IssuePreview title='test issue' status='open' modified='2 days ago' type='bug' issueKey='TYR-243' />
-			<IssuePreview title='test issue' status='open' modified='2 days ago' type='bug' issueKey='TYR-243' />
-			<IssuePreview title='test issue' status='open' modified='2 days ago' type='bug' issueKey='TYR-243' />
+			<TicketListItem title='test Ticket' status='open' modified='2 days ago' type='bug' ticketKey='TYR-243' />
+			<TicketListItem title='test Ticket' status='open' modified='2 days ago' type='bug' ticketKey='TYR-243' />
+			<TicketListItem title='test Ticket' status='open' modified='2 days ago' type='bug' ticketKey='TYR-243' />
+			<TicketListItem title='test Ticket' status='open' modified='2 days ago' type='bug' ticketKey='TYR-243' />
+			<TicketListItem title='test Ticket' status='open' modified='2 days ago' type='bug' ticketKey='TYR-243' />
+			<TicketListItem title='test Ticket' status='open' modified='2 days ago' type='bug' ticketKey='TYR-243' />
+			<TicketListItem title='test Ticket' status='open' modified='2 days ago' type='bug' ticketKey='TYR-243' />
+			<TicketListItem title='test Ticket' status='open' modified='2 days ago' type='bug' ticketKey='TYR-243' />
+			<TicketListItem title='test Ticket' status='open' modified='2 days ago' type='bug' ticketKey='TYR-243' />
+			<TicketListItem title='test Ticket' status='open' modified='2 days ago' type='bug' ticketKey='TYR-243' />
 		</Page>
 	);
 };
