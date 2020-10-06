@@ -6,8 +6,16 @@
 	padding: spacing(extraTight) spacing(extraTight);
 	border-radius: border-radius();
 	cursor: pointer;
+	transition: 0.2s;
 
 	&:hover {
 		background-color: color($grey, lighter);
 	}
+	&:active {
+		background-color: color($grey, light);
+	}
+}
+
+.IssuePreview--Text {
+	padding: 0 spacing(tight);
 }

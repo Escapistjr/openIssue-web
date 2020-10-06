@@ -1,6 +1,6 @@
 import { bugIcon, design, improvement, question } from '../../assets/icons';
 
-export type IssueStatuses = 'open' | 'inProgress' | 'done' | 'moreInfoNeeded' | 'duplicate' | 'wontFix';
+export type IssueStatuses = 'open' | 'inProgress' | 'resolved' | 'moreInfoNeeded' | 'duplicate' | 'closed';
 export type Distribution = 'equalSpacing' | 'leading' | 'trailing' | 'center' | 'fill' | 'fillEvenly';
 export type Spacing = 'none' | 'extraSmall' | 'small' | 'medium' | 'normal' | 'large' | 'extraLarge';
 export type Alignment = 'leading' | 'trailing' | 'center' | 'fill' | 'baseline';
@@ -81,12 +81,12 @@ export const Colors = {
 };
 
 export const IssueStatus = {
-	open: { name: 'Open', color: Colors.inkLighter },
-	inProgress: { name: 'In Progress', color: Colors.blueLight },
-	done: { name: 'Done', color: Colors.greenBase },
-	moreInfoNeeded: { name: 'More info needed', color: Colors.orangeDark },
-	duplicate: { name: 'Duplicate', color: Colors.orangeBase },
-	wontFix: { name: "Won't Fix", color: Colors.orangeLight },
+	open: { name: 'Open', color: Colors.inkLightest },
+	inProgress: { name: 'In Progress', color: Colors.blueLighter },
+	resolved: { name: 'Resolved', color: Colors.greenLight },
+	moreInfoNeeded: { name: 'More info needed', color: Colors.orangeBase },
+	duplicate: { name: 'Duplicate', color: Colors.orangeLight },
+	closed: { name: 'Closed', color: Colors.greyLight },
 };
 
 export const IssueType = {

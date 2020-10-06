@@ -10,6 +10,15 @@ export const Dashboard = () => {
 				<div>Dashboard view</div>
 			</Stack>
 			<IssuePreview title='test issue' status='open' modified='2 days ago' type='bug' issueKey='TYR-243' />
+			<IssuePreview title='test issue' status='open' modified='2 days ago' type='bug' issueKey='TYR-243' />
+			<IssuePreview title='test issue' status='open' modified='2 days ago' type='bug' issueKey='TYR-243' />
+			<IssuePreview title='test issue' status='open' modified='2 days ago' type='bug' issueKey='TYR-243' />
+			<IssuePreview title='test issue' status='open' modified='2 days ago' type='bug' issueKey='TYR-243' />
+			<IssuePreview title='test issue' status='open' modified='2 days ago' type='bug' issueKey='TYR-243' />
+			<IssuePreview title='test issue' status='open' modified='2 days ago' type='bug' issueKey='TYR-243' />
+			<IssuePreview title='test issue' status='open' modified='2 days ago' type='bug' issueKey='TYR-243' />
+			<IssuePreview title='test issue' status='open' modified='2 days ago' type='bug' issueKey='TYR-243' />
+			<IssuePreview title='test issue' status='open' modified='2 days ago' type='bug' issueKey='TYR-243' />
 		</Page>
 	);
 };

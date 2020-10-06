@@ -15,16 +15,18 @@ export interface IssuePreviewProps {
 export const IssuePreview = ({ title, status, modified, type, issueKey }: IssuePreviewProps) => {
 	return (
 		<div className='IssuePreview'>
-			<Stack alignment='center' distribution='fill'>
+			<Stack alignment='center' distribution='fill' spacing='none'>
 				<Stack.Item keepWidth>
 					<TypeDropdown initialType={type} issueKey={issueKey} />
 				</Stack.Item>
-				<Stack distribution='equalSpacing' alignment='center'>
-					<Text variation='subdued'>{title}</Text>
-					<Text variation='subdued'>
-						<Caption>{modified}</Caption>
-					</Text>
-				</Stack>
+				<div className='IssuePreview--Text'>
+					<Stack distribution='equalSpacing' alignment='center' spacing='none'>
+						<Text variation='subdued'>{title}</Text>
+						<Text variation='subdued'>
+							<Caption>{modified}</Caption>
+						</Text>
+					</Stack>
+				</div>
 				<Stack.Item keepWidth>
 					<StatusDropdown intialStatus={status} issueKey={issueKey} />
 				</Stack.Item>
