@@ -1,0 +1,32 @@
+@import '../../shared/styles/utilities';
+
+html,
+body {
+	min-height: 100%;
+	height: 100%;
+}
+
+.Page--marginFix {
+	@include margin-collapse-fix;
+}
+
+.Page {
+	height: 100%;
+	padding: spacing(tight) spacing();
+
+	@include breakpoint-after(450px) {
+		padding: spacing() spacing(extraLoose);
+	}
+}
+
+.Page--paddingNone {
+	padding: spacing(none);
+}
+
+.Page--paddingSmall {
+	padding: spacing(tight);
+}
+
+.Page--paddingLarge {
+	padding: spacing(extraLoose);
+}

@@ -1,0 +1,9 @@
+@import '../../shared/styles/utilities';
+
+.Caption {
+	font-size: rem(13px);
+	font-weight: 400;
+	line-height: rem(20px);
+	margin: 0;
+	user-select: none;
+}

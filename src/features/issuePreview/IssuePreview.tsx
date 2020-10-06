@@ -1,22 +1,33 @@
-import { IssueStatusTypes, IssueType } from '../../shared/utilities/Types';
-import { Stack, StatusDropdown } from '../../elements';
+import { IssueStatuses, IssueTypes } from '../../shared/utilities/Types';
+import { StatusDropdown, TypeDropdown } from '..';
+import { Caption, Stack, Text } from '../../elements';
 import './IssuePreview.scss';
 import React from 'react';
 
 export interface IssuePreviewProps {
 	title: string;
-	status: IssueStatusTypes;
+	status: IssueStatuses;
 	modified: string;
-	type: IssueType;
+	type: IssueTypes;
+	issueKey: string;
 }
 
-export const IssuePreview = ({ title, status, modified, type }: IssuePreviewProps) => {
+export const IssuePreview = ({ title, status, modified, type, issueKey }: IssuePreviewProps) => {
 	return (
-		<div>
-			<Stack alignment='center'>
-				<div className='IssuePreview--ColorStrip' />
-				<div>{title}</div>
-				<StatusDropdown intialStatus={status} />
+		<div className='IssuePreview'>
+			<Stack alignment='center' distribution='fill'>
+				<Stack.Item keepWidth>
+					<TypeDropdown initialType={type} issueKey={issueKey} />
+				</Stack.Item>
+				<Stack distribution='equalSpacing' alignment='center'>
+					<Text variation='subdued'>{title}</Text>
+					<Text variation='subdued'>
+						<Caption>{modified}</Caption>
+					</Text>
+				</Stack>
+				<Stack.Item keepWidth>
+					<StatusDropdown intialStatus={status} issueKey={issueKey} />
+				</Stack.Item>
 			</Stack>
 		</div>
 	);

@@ -1,11 +1,13 @@
-export type IssueStatusTypes = 'open' | 'inProgress' | 'done' | 'moreInfoNeeded' | 'duplicate' | 'wontFix';
+import { bugIcon, design, improvement, question } from '../../assets/icons';
+
+export type IssueStatuses = 'open' | 'inProgress' | 'done' | 'moreInfoNeeded' | 'duplicate' | 'wontFix';
 export type Distribution = 'equalSpacing' | 'leading' | 'trailing' | 'center' | 'fill' | 'fillEvenly';
 export type Spacing = 'none' | 'extraSmall' | 'small' | 'medium' | 'normal' | 'large' | 'extraLarge';
 export type Alignment = 'leading' | 'trailing' | 'center' | 'fill' | 'baseline';
 export type Variation = 'positive' | 'negative' | 'strong' | 'subdued';
-export type IssueType = 'Bug' | 'Improvement' | 'Design' | 'Question';
+export type IssueTypes = 'bug' | 'improvement' | 'design' | 'question';
 export type Size = 'small' | 'medium' | 'large' | 'extraLarge';
-export type PreferredAlignment = 'left' | 'center' | 'right';
+export type Padding = 'none' | 'small' | 'normal' | 'large';
 export type Falsy = boolean | undefined | null | 0;
 export type Responsive<T> = T | T[];
 
@@ -85,6 +87,13 @@ export const IssueStatus = {
 	moreInfoNeeded: { name: 'More info needed', color: Colors.orangeDark },
 	duplicate: { name: 'Duplicate', color: Colors.orangeBase },
 	wontFix: { name: "Won't Fix", color: Colors.orangeLight },
+};
+
+export const IssueType = {
+	bug: { name: 'Bug', color: Colors.redDark, colorName: 'redDark' as Color, icon: bugIcon },
+	improvement: { name: 'Improvement', color: Colors.blueDark, colorName: 'blueDark' as Color, icon: improvement },
+	design: { name: 'Design', color: Colors.cyanDark, colorName: 'cyanDark' as Color, icon: design },
+	question: { name: 'Question', color: Colors.purpleDark, colorName: 'purpleDark' as Color, icon: question },
 };
 
 export type Color =

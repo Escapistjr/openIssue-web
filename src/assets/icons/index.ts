@@ -1,6 +1,10 @@
 export { default as spinnerSmall } from './spinnerSmall.svg';
 export { default as spinnerLarge } from './spinnerLarge.svg';
+export { default as improvement } from './improvement.svg';
 export { default as arrowRight } from './arrowRight.svg';
 export { default as arrowLeft } from './arrowLeft.svg';
+export { default as question } from './question.svg';
+export { default as bugIcon } from './bugIcon.svg';
 export { default as cancel } from './cancel.svg';
 export { default as search } from './search.svg';
+export { default as design } from './design.svg';

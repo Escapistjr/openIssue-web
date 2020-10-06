@@ -1,0 +1,23 @@
+@import '../../shared/styles/utilities';
+
+.Text {
+	font-size: rem(15px);
+	line-height: rem(22px);
+	padding: 0;
+}
+
+.Text--Style-Positive {
+	color: color($green, dark);
+}
+
+.Text--Style-Negative {
+	color: color($red, dark);
+}
+
+.Text--Style-Strong {
+	font-weight: 600;
+}
+
+.Text--Style-Subdued {
+	color: color($ink, lighter);
+}

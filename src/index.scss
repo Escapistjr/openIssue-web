@@ -461,7 +461,7 @@ fieldset {
 
 /* https://css-tricks.com/eliminate-jumps-in-horizontal-centering-by-forcing-a-scroll-bar */
 body {
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 
 /* Clearfix body */

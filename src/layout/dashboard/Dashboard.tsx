@@ -1,16 +1,15 @@
-import { Button, Stack } from '../../elements';
+import { Page, Stack } from '../../elements';
 import { IssuePreview } from '../../features';
 import React from 'react';
 import './Dashboard.scss';
 
 export const Dashboard = () => {
 	return (
-		<div>
-			<Stack padding='medium' alignment='baseline' spacing='extraTight'>
-				<Button plain>Test</Button>
+		<Page>
+			<Stack alignment='baseline' spacing='extraTight'>
 				<div>Dashboard view</div>
 			</Stack>
-			<IssuePreview title='test issue' status='open' modified='2 days ago' type='Bug' />
-		</div>
+			<IssuePreview title='test issue' status='open' modified='2 days ago' type='bug' issueKey='TYR-243' />
+		</Page>
 	);
 };

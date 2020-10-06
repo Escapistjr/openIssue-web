@@ -68,3 +68,13 @@ $spacing-map: (
 		@error 'Spacing variant `#{$variant}` not found. Available variants: #{available-names($spacing-map)}';
 	}
 }
+
+/** Ensure margins of any children are contained within */
+@mixin margin-collapse-fix {
+	padding: 1px 0 0 0;
+	margin: -1px 0 0 0;
+	&::after {
+		content: '';
+		display: table;
+	}
+}
